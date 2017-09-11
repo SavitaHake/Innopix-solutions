@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Country Select</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="build/css/countrySelect.css">
+		<link rel="stylesheet" href="build/css/demo.css">
+		<!--script type="text/javascript" src="js/jquery.currency.js"></script-->
+        <!--script type="text/javascript" src="js/jquery.currency.localization.en_US.js"></script-->
+        <!--link type="text/css" rel="stylesheet" href="css/currency.default.css"-->
+	</head>
+	<body>
+	<div style="width:300px;height:180px">
+        <div class="panel panel-primary">
+    <div class="panel-heading"><h1>Country select</h1></div>
+		<div class="panel-heading">
+		
+		<form>
+			<div class="form-group">
+				<input id="country_selector" type="text">
+				<label for="country_selector" style="display:none;">Select a country here...</label>
+			</div>
+			<div class="form-group" style="display:none;">
+				<input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+				<label for="country_selector_code">...and the selected country code will be updated here</label>
+			</div>
+			
+			<!--div class="form-group">
+				<input id="country_selector" type="text">
+				<label for="country_selector_map" style="display:none;">Select a map here...</label>
+			</div-->
+		<button type="submit" style="display:none;">Submit</button>
+			</div>
+		</form>
+
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="build/js/countrySelect.min.js"></script>
+		<script>
+			$("#country_selector").countrySelect({
+				preferredCountries: ['', 'gb', 'us']
+			});
+			
+			$(document).ready(function(){
+				$('#currency-widget').currency();
+			});
+
+			
+		//function country_selector_map()
+		//{
+			//var geocoder = new google.maps.Geocoder();
+         // var location = "England";
+       //geocoder.geocode( { 'address': location }, function(results, status) //{
+     //if (status == google.maps.GeocoderStatus.OK) {
+      //  map.setCenter(results[0].geometry.location);
+   // } else //{
+       // alert("Could not find location: " + location);
+    //}
+//});
+		</script>
+		</div>
+		</div>
+	</body>
+</html>
